@@ -5,4 +5,4 @@ import Media from './src/playlist/components/media'
 
 const app = document.getElementById('app')
 
-render(<Media />, app)
+render(<Media type="video" title="¿Qué es Responsive Design?" author="Leonidas Esteban" image="./images/covers/responsive.jpg" />, app)
