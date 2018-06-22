@@ -1,32 +1,19 @@
 import React from 'react'
 import Media from './media'
-import Category from './category'
 
 import './playlist.css'
 
 function Playlist(props) {
-  const playlist = props.data.categories
 
   return (
-    <div>
+    <div className="Playlist">
     {
-      playlist.map((item) => {
-        return (
-          <div key={item.id}>
-            <Category {...item} />
-            <div className='Playlist'>
-            {
-              item.playlist.map((item) => {
-                return <Media {...item} key={item.id}/>
-              })
-            }
-            </div>
-          </div>
-          )
+      props.playlist.map((item) => {
+         return <Media {...item} key={item.id}/>
       })
     }
     </div>
-    )
-  }
+  )
+}
 
 export default Playlist
