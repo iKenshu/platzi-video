@@ -3,13 +3,6 @@ import PropTypes from 'prop-types'
 import './media.css'
 
 class Media extends PureComponent {
-  state = {}
-
-  handleClick = (event) =>{
-    this.setState({
-      author: 'Kevin Morales',
-    })
-  }
   render() {
     const { title, cover, author } = this.props
 
@@ -23,7 +16,7 @@ class Media extends PureComponent {
       }
     }
     return (
-      <div className='Media' onClick={this.handleClick}>
+      <div className='Media' onClick={this.props.handleClick}>
         <div className='Media-cover'>
           <img className='Media-image'
             src={cover}
