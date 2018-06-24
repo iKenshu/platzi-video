@@ -28,7 +28,7 @@ class Home extends Component{
           <Related />
           <Categories 
             handleOpenModal={this.handleOpenModal}
-            categories={this.props.data}/>
+            categories={this.props.data.categories}/>
           {
             this.state.modalVisible &&
             <ModalContainer>
