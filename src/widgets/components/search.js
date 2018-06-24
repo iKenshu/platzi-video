@@ -1,12 +1,21 @@
 import React from 'react'
 import './search.css'
 
-const Search = () => (
-  <form action="" className='Search'>
-    <input 
+const Search = (props) => (
+  <form 
+    action="" 
+    className="Search"
+    onSubmit={props.handleSubmit}
+  >
+    <input
+      ref={props.setRef} 
       className="Search-input" 
       placeholder="Busca tu video favorito"
-      type="text"/>
+      type="text"
+      name="search"
+      onChange={props.handleChange}
+      value={props.value}
+    />
   </form>
 )
 
