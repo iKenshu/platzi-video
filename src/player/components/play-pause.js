@@ -16,11 +16,11 @@ function PlayPause(props) {
 
         :
         
-          <button
-            onClick={props.handleClick}
-          >
-            <Pause size={25} color="white"/>
-          </button>
+        <button
+          onClick={props.handleClick}
+        >
+          <Pause size={25} color="white"/>
+        </button>
 
       }
 
