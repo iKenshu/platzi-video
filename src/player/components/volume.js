@@ -1,9 +1,9 @@
 import React from 'react'
-import VolumeIcon from '../../icons/components/play'
+import { VolumeIcon } from '../../icons/components/play'
 import './volume.css'
 
 function Volume(props) {
-  return(
+  return (
     <button className="Volume">
       <VolumeIcon
         color="white"
@@ -12,6 +12,10 @@ function Volume(props) {
       <div className="Volume-range">
         <input 
           type="range"
+          min={0}
+          max={1}
+          step={.05}
+          onChange={props.handleVolumeChange}
         />
       </div>
     </button>

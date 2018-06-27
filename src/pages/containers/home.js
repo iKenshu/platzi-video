@@ -27,9 +27,6 @@ class Home extends Component{
       <HandleError>
         <HomeLayout>
           <Related />
-          <VideoPlayer
-            autoplay
-          />
           <Categories 
             handleOpenModal={this.handleOpenModal}
             categories={this.props.data.categories}/>
@@ -39,7 +36,9 @@ class Home extends Component{
               <Modal
                 handleClick={this.handleCloseModal}
               >
-                <h1>esto es un portal</h1>
+                <VideoPlayer
+                  autoplay
+                />
               </Modal>
             </ModalContainer>
           }
